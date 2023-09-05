@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="690.0" prefWidth="1360.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hibernate_d24.controller.DashboardFormController">
+   <children>
+      <ImageView fitHeight="690.0" fitWidth="1360.0">
+         <image>
+            <Image url="@../images/dash.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnLogout" layoutX="88.0" layoutY="628.0" mnemonicParsing="false" onAction="#btnLogoutOnAction" opacity="0.0" prefHeight="34.0" prefWidth="164.0" style="-fx-background-radius: 25;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnAcc" layoutX="409.0" layoutY="227.0" mnemonicParsing="false" onAction="#btnAccOnAction" prefHeight="34.0" prefWidth="292.0" style="-fx-background-color: ash;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnCurrStu" layoutX="68.0" layoutY="174.0" mnemonicParsing="false" onAction="#btnCurrStuOnAction" opacity="0.0" prefHeight="165.0" prefWidth="235.0" style="-fx-background-radius: 25;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnAcco" layoutX="68.0" layoutY="376.0" mnemonicParsing="false" onAction="#btnAccoOnAction" opacity="0.0" prefHeight="172.0" prefWidth="235.0" style="-fx-background-radius: 25;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnManageStu" layoutX="388.0" layoutY="337.0" mnemonicParsing="false" onAction="#btnManageStuOnAction" opacity="0.0" prefHeight="248.0" prefWidth="373.0" style="-fx-background-radius: 25;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnManageRoom" layoutX="801.0" layoutY="337.0" mnemonicParsing="false" onAction="#btnManageRoomOnAction" opacity="0.0" prefHeight="248.0" prefWidth="373.0" style="-fx-background-radius: 25;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

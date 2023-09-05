@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="690.0" prefWidth="1360.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hibernate_d24.controller.RoomManageFormController">
+   <children>
+      <ImageView fitHeight="690.0" fitWidth="1360.0">
+         <image>
+            <Image url="@../images/manage_rooms.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnBack" layoutX="74.0" layoutY="619.0" mnemonicParsing="false" onAction="#btnBackOnAction" opacity="0.0" prefHeight="42.0" prefWidth="136.0" style="-fx-background-radius: 25;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnDelete" layoutX="592.0" layoutY="551.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" opacity="0.0" prefHeight="42.0" prefWidth="160.0" style="-fx-background-radius: 25;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnSave" layoutX="972.0" layoutY="551.0" mnemonicParsing="false" onAction="#btnSaveOnAction" opacity="0.0" prefHeight="42.0" prefWidth="160.0" style="-fx-background-radius: 25;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnUpdate" layoutX="782.0" layoutY="551.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" opacity="0.0" prefHeight="42.0" prefWidth="160.0" style="-fx-background-radius: 25;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField fx:id="txtSId" layoutX="827.0" layoutY="166.0" onAction="#txtSIdOnAction" prefHeight="33.0" prefWidth="246.0" style="-fx-background-color: ash;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtContact" layoutX="827.0" layoutY="320.0" onAction="#txtContactOnAction" prefHeight="33.0" prefWidth="246.0" style="-fx-background-color: ash;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtAdd" layoutX="827.0" layoutY="267.0" onAction="#txtAddOnAction" prefHeight="33.0" prefWidth="246.0" style="-fx-background-color: ash;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtName" layoutX="827.0" layoutY="212.0" onAction="#txtNameOnAction" prefHeight="33.0" prefWidth="246.0" style="-fx-background-color: ash;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>

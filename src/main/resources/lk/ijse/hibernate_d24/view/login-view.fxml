@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="690.0" prefWidth="1360.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hibernate_d24.controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="690.0" fitWidth="1360.0">
+         <image>
+            <Image url="@../images/d24_login.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnLogin" layoutX="972.0" layoutY="518.0" mnemonicParsing="false" onAction="#btnLoginOnAction" opacity="0.0" prefHeight="41.0" prefWidth="161.0" style="-fx-background-radius: 25;">
+         <cursor>
+            <Cursor fx:constant="HAND" /> 
+         </cursor></Button>
+      <TextField fx:id="txtUser" layoutX="922.0" layoutY="278.0" onAction="#txtUserOnAction" prefHeight="46.0" prefWidth="269.0" promptText="Username" style="-fx-background-color: ash; -fx-font-style: white;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font name="Gadugi Bold" size="20.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="txtPw" layoutX="922.0" layoutY="402.0" onAction="#txtPwOnAction" prefHeight="45.0" prefWidth="227.0" promptText="Password" style="-fx-background-color: ash;">
+         <font>
+            <Font name="Gadugi" size="20.0" />
+         </font></PasswordField>
+      <Button fx:id="btnPw" layoutX="1159.0" layoutY="418.0" mnemonicParsing="false" onAction="#btnPwOnAction" prefHeight="9.0" prefWidth="32.0" style="-fx-background-radius: 50; -fx-background-color: ash;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>
