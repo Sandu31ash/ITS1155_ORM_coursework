@@ -10,7 +10,8 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class StudentManageFormController {
-    public void txtSIdOnAction(ActionEvent actionEvent) {
+
+    public void txtKeyOnAction(ActionEvent actionEvent) {
 
     }
 
@@ -51,6 +52,10 @@ public class StudentManageFormController {
 
     }
 
+    public void txtSIdOnAction(ActionEvent actionEvent) {
+
+    }
+
     public void btnDeleteOnAction(ActionEvent actionEvent) {
 
     }
@@ -72,4 +77,5 @@ public class StudentManageFormController {
         stage.setTitle("Dashboard");
         stage.centerOnScreen();
     }
+
 }

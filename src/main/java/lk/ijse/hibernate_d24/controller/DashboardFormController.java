@@ -85,12 +85,24 @@ public class DashboardFormController implements Initializable {
 //        newStage.show();
     }
 
-    public void btnCurrStuOnAction(ActionEvent actionEvent) {
-
+    public void btnCurrStuOnAction(ActionEvent actionEvent) throws IOException {
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/lk/ijse/hibernate_d24/view/current_stu_view.fxml"));
+        Scene scene = new Scene(anchorPane);
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        //Stage stage = (Stage) pane.getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("Login");
+        stage.centerOnScreen();
     }
 
-    public void btnAccoOnAction(ActionEvent actionEvent) {
-
+    public void btnAccoOnAction(ActionEvent actionEvent) throws IOException {
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/lk/ijse/hibernate_d24/view/current_room_view.fxml"));
+        Scene scene = new Scene(anchorPane);
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        //Stage stage = (Stage) pane.getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("Login");
+        stage.centerOnScreen();
     }
 
     public void btnManageStuOnAction(ActionEvent actionEvent) throws IOException {
