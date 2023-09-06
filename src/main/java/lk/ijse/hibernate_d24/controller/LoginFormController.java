@@ -58,7 +58,7 @@ public class LoginFormController {
 
         boolean isValid = userBO.valid(userName, pW);
 
-        if(isValid) {
+//        if(isValid) {
 
             AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/lk/ijse/hibernate_d24/view/dashboard-view.fxml"));
             Scene scene = new Scene(anchorPane);
@@ -68,9 +68,9 @@ public class LoginFormController {
             stage.setTitle("Dashboard");
             stage.centerOnScreen();
 
-        }else{
-            new Alert(Alert.AlertType.ERROR, "Login Failed!\nInvalid Username or Password").show();
-        }
+//        }else{
+//            new Alert(Alert.AlertType.ERROR, "Login Failed!\nInvalid Username or Password").show();
+//        }
 
     }
 

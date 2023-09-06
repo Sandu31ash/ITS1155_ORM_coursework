@@ -17,10 +17,10 @@ public class DAOFactory {
 
     public SuperDAO getDAO(DAOTypes types) {
         switch (types) {
-//            case STUDENT:
-//                return new StudentDAOImpl();
-//            case ROOM:
-//                return new RoomDAOImpl();
+            case STUDENT:
+                return new StudentDAOImpl();
+            case ROOM:
+                return new RoomDAOImpl();
             case QUERY_DAO:
                 return new QueryDAOImpl();
             case USER:

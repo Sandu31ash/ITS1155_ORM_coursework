@@ -4,6 +4,7 @@ import lk.ijse.hibernate_d24.dao.custom.StudentDAO;
 import lk.ijse.hibernate_d24.entity.Student;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class StudentDAOImpl implements StudentDAO {
     @Override
@@ -19,5 +20,10 @@ public class StudentDAOImpl implements StudentDAO {
     @Override
     public boolean delete(String id) throws SQLException, ClassNotFoundException {
         return false;
+    }
+
+    @Override
+    public ArrayList<Student> getAll() throws SQLException, ClassNotFoundException {
+        return null;
     }
 }

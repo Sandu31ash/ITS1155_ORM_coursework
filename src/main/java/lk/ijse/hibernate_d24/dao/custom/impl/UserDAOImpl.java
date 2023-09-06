@@ -6,6 +6,7 @@ import lk.ijse.hibernate_d24.entity.User;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class UserDAOImpl implements UserDAO {
     @Override
@@ -33,6 +34,11 @@ public class UserDAOImpl implements UserDAO {
     @Override
     public boolean delete(String id) throws SQLException, ClassNotFoundException {
         return false;
+    }
+
+    @Override
+    public ArrayList<User> getAll() throws SQLException, ClassNotFoundException {
+        return null;
     }
 
 }

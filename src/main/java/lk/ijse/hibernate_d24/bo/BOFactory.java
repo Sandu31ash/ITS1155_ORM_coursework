@@ -16,10 +16,10 @@ public class BOFactory {
 
     public SuperBO getBO(BOTypes boTypes){
         switch (boTypes) {
-//            case STUDENT:
-//                return new StudentBOImpl();
-//            case ROOM:
-//                return new RoomBOImpl();
+            case STUDENT:
+                return new StudentBOImpl();
+            case ROOM:
+                return new RoomBOImpl();
             case USER:
                   return new UserBOImpl();
             default:
