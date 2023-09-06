@@ -22,20 +22,29 @@ import java.util.ResourceBundle;
 public class DashboardFormController implements Initializable {
 
     @FXML
-    private AnchorPane pane;
-
-    @FXML
     private Button btnAcc;
 
     @FXML
+    private Button btnAcco;
+
+    @FXML
+    private Button btnCurrStu;
+
+    @FXML
     private Button btnLogout;
+
+    @FXML
+    private Button btnManageRoom;
+
+    @FXML
+    private Button btnManageStu;
 
     @FXML
     private Label lblUser;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-//        lblUser.setText(LoginFormController.user);
+        lblUser.setText(LoginFormController.user);
         //getImage(LoginFormController.user);
     }
 

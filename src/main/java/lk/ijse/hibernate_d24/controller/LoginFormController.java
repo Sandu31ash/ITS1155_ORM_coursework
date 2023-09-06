@@ -35,7 +35,6 @@ public class LoginFormController {
     private TextField txtUser;
 
     public static String user;
-    public static String pW;
 
 //    public void btnRegCOnAction(ActionEvent actionEvent) throws IOException {
 //        FXMLLoader loader = new FXMLLoader(getClass().getResource("register-view.fxml"));
@@ -52,12 +51,14 @@ public class LoginFormController {
 
     public void btnLoginOnAction(ActionEvent actionEvent) throws IOException, SQLException, ClassNotFoundException {
 
-//        user = txtUser.getText();
-//        pW = txtPw.getText();
+         user = txtUser.getText();
 
-//        boolean isValid = userBO.valid(user, pW);
+         String userName = txtUser.getText();
+         String pW = txtPw.getText();
 
-//        if(isValid) {
+        boolean isValid = userBO.valid(userName, pW);
+
+        if(isValid) {
 
             AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/lk/ijse/hibernate_d24/view/dashboard-view.fxml"));
             Scene scene = new Scene(anchorPane);
@@ -67,9 +68,9 @@ public class LoginFormController {
             stage.setTitle("Dashboard");
             stage.centerOnScreen();
 
-//        }else{
-//            new Alert(Alert.AlertType.ERROR, "Login Failed!\nInvalid Username or Password").show();
-//        }
+        }else{
+            new Alert(Alert.AlertType.ERROR, "Login Failed!\nInvalid Username or Password").show();
+        }
 
     }
 

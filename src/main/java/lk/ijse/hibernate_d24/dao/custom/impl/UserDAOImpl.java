@@ -2,6 +2,7 @@ package lk.ijse.hibernate_d24.dao.custom.impl;
 
 import lk.ijse.hibernate_d24.dao.SQLUtil;
 import lk.ijse.hibernate_d24.dao.custom.UserDAO;
+import lk.ijse.hibernate_d24.entity.User;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -9,7 +10,7 @@ import java.sql.SQLException;
 public class UserDAOImpl implements UserDAO {
     @Override
     public boolean valid(String userName, String pw) throws SQLException, ClassNotFoundException {
-        ResultSet rst = SQLUtil.execute("SELECT * FROM user WHERE user_name = ? AND password = ? AND (job_role = ? OR job_role = ?)", userName,pw,"Head Chef", "Sous Chef");
+        ResultSet rst = SQLUtil.execute("SELECT * FROM user WHERE username = ? AND pw = ?" , userName, pw);
 
         if(rst.next()) {
             return true;
@@ -17,4 +18,21 @@ public class UserDAOImpl implements UserDAO {
             return false;
         }
     }
+
+    @Override
+    public boolean save(User dto) throws SQLException, ClassNotFoundException {
+        return false;
+    }
+
+    @Override
+    public boolean update(User entity) throws SQLException, ClassNotFoundException {
+        boolean isUpdated = SQLUtil.execute("UPDATE user SET username = ?, pw = ? WHERE username = ?", entity.getUserName(), entity.getpW(), entity.getUser());
+        return isUpdated;
+    }
+
+    @Override
+    public boolean delete(String id) throws SQLException, ClassNotFoundException {
+        return false;
+    }
+
 }

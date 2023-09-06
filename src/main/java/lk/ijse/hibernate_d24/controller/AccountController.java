@@ -3,30 +3,78 @@ package lk.ijse.hibernate_d24.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import lk.ijse.hibernate_d24.bo.BOFactory;
+import lk.ijse.hibernate_d24.bo.custom.UserBO;
+import lk.ijse.hibernate_d24.dto.UserDTO;
 
 import java.io.IOException;
+import java.net.URL;
+import java.sql.SQLException;
+import java.util.ResourceBundle;
 
-public class AccountController {
+public class AccountController implements Initializable {
+
+    UserBO userBO = (UserBO) BOFactory.getBOFactory().getBO(BOFactory.BOTypes.USER);
 
     @FXML
-    private TextField txtUserName;
+    private Button btnBack;
+
+    @FXML
+    private Button btnPw;
+
+    @FXML
+    private Button btnUpdate;
 
     @FXML
     private PasswordField txtPw;
 
     @FXML
-    private Button btnUpdate;
+    private TextField txtUserName;
 
-    public void btnUpdateOnAction(ActionEvent actionEvent) {
-        new Alert(Alert.AlertType.CONFIRMATION, "Account is successfully updated").show();
+    @FXML
+    private Label lblUser;
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        lblUser.setText(LoginFormController.user);
+        //getImage(LoginFormController.user);
+    }
+
+
+    public void btnUpdateOnAction(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
+
+        String userName = txtUserName.getText();
+        String pW = txtPw.getText();
+        String user = lblUser.getText();
+
+        if (txtUserName.getText() == null || txtUserName.getText().isEmpty()) {
+//            lblUser.setText("Username or Password cannot be empty  !");
+            new Alert(Alert.AlertType.ERROR, "Username or Password cannot be empty!").show();
+            txtUserName.requestFocus();
+        }else if (txtPw.getText() == null || txtPw.getText().isEmpty()) {
+//            lblPw.setText("Username or Password cannot be empty  !");
+            new Alert(Alert.AlertType.ERROR, "Username or Password cannot be empty!").show();
+        } else if (txtPw.getText().matches("^(?=.*\\d)(?=.*[a-zA-Z])(?=.*\\W).{8,}$")) {
+            //boolean isCreated = UserModel.isCreated(userName, pW, id, jobRole);
+
+            boolean isUpdated = userBO.update(new UserDTO(userName, pW, user));
+
+            if (isUpdated) {
+//                getAllUser();
+                new Alert(Alert.AlertType.CONFIRMATION, "Account successfully updated!").show();
+                lblUser.setText(userName);
+            }
+            //new Alert(Alert.AlertType.ERROR, "Invalid Password!\nTry Again").show();
+        }else {
+//            lblPw.setText("Invalid Password!\nTry Again");
+            new Alert(Alert.AlertType.ERROR, "Invalid Password!\nTry Again").show();
+        }
     }
 
     public void btnPWOnAction(ActionEvent actionEvent) {

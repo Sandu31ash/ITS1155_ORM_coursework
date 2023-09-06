@@ -28,7 +28,7 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtStatus" layoutX="998.0" layoutY="334.0" onAction="#txtStatusOnAction" prefHeight="33.0" prefWidth="246.0" style="-fx-background-color: ash;">
+      <TextField fx:id="txtStatus" layoutX="998.0" layoutY="336.0" onAction="#txtStatusOnAction" prefHeight="33.0" prefWidth="246.0" style="-fx-background-color: ash;">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor>
@@ -36,7 +36,7 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtRTId" layoutX="998.0" layoutY="282.0" onAction="#txtRTIdOnAction" prefHeight="33.0" prefWidth="246.0" style="-fx-background-color: ash;">
+      <TextField fx:id="txtRTId" layoutX="998.0" layoutY="289.0" onAction="#txtRTIdOnAction" prefHeight="33.0" prefWidth="246.0" style="-fx-background-color: ash;">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor>
@@ -44,7 +44,7 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtDate" layoutX="998.0" layoutY="228.0" onAction="#txtDateOnAction" prefHeight="33.0" prefWidth="246.0" promptText="dd/mm/yy" style="-fx-background-color: ash;">
+      <TextField fx:id="txtDate" layoutX="998.0" layoutY="230.0" onAction="#txtDateOnAction" prefHeight="33.0" prefWidth="246.0" promptText="dd/mm/yy" style="-fx-background-color: ash;">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor>
@@ -100,7 +100,7 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtKey" layoutX="998.0" layoutY="398.0" onAction="#txtKeyOnAction" prefHeight="33.0" prefWidth="246.0" promptText="paid/not" style="-fx-background-color: ash;">
+      <TextField fx:id="txtKey" layoutX="998.0" layoutY="386.0" onAction="#txtKeyOnAction" prefHeight="33.0" prefWidth="246.0" promptText="paid/not" style="-fx-background-color: ash;">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor>

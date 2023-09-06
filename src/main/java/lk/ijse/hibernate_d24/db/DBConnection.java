@@ -3,7 +3,7 @@ package lk.ijse.hibernate_d24.db;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-
+ 
 public class DBConnection {
 
     private static DBConnection dbConnection;
@@ -11,7 +11,7 @@ public class DBConnection {
 
     private DBConnection() throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.jdbc.Driver");
-        connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/d24", "root", "1234");
+        connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/hostel", "root", "1234");
     }
 
     public static DBConnection getDbConnection() throws SQLException, ClassNotFoundException {
