@@ -1,53 +1,18 @@
-package lk.ijse.hibernate_d24.entity;
+package lk.ijse.hibernate_d24.dto;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+public class RoomDTO {
 
-import java.util.List;
-
-//@Entity
-public class Room {
-
-//    @Id
     private String rId;
     private String type;
     private String keyMoney;
     private int qty;
 
-//    @OneToMany(mappedBy = "room")
-//    private List<Student> students;
-
-//    public Room(String rId, String type, String keyMoney, int qty, List<Student> students) {
-//        this.rId = rId;
-//        this.type = type;
-//        this.keyMoney = keyMoney;
-//        this.qty = qty;
-////        this.students = students;
-//    }
-
-//    public Room(List<Student> students) {
-//        this.students = students;
-//    }
-
-    public Room(String rId, String type, String keyMoney, int qty) {
+    public RoomDTO(String rId, String type, String keyMoney, int qty) {
         this.rId = rId;
         this.type = type;
         this.keyMoney = keyMoney;
         this.qty = qty;
     }
-
-    public Room() {
-
-    }
-
-//    public List<Student> getStudents() {
-//        return students;
-//    }
-//
-//    public void setStudents(List<Student> students) {
-//        this.students = students;
-//    }
 
     public String getrId() {
         return rId;
@@ -83,11 +48,12 @@ public class Room {
 
     @Override
     public String toString() {
-        return "Room{" +
+        return "RoomDTO{" +
                 "rId='" + rId + '\'' +
                 ", type='" + type + '\'' +
                 ", keyMoney='" + keyMoney + '\'' +
                 ", qty=" + qty +
                 '}';
     }
+
 }

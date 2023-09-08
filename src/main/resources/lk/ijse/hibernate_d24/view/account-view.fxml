@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -17,17 +18,12 @@
             <Image url="@../images/acc.png" />
          </image>
       </ImageView>
-      <Button fx:id="btnUpdate" layoutX="330.0" layoutY="303.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" opacity="0.0" prefHeight="25.0" prefWidth="85.0" style="-fx-background-radius: 25;">
+      <Button fx:id="btnUpdate" layoutX="387.0" layoutY="301.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" opacity="0.0" prefHeight="25.0" prefWidth="89.0" style="-fx-background-radius: 25;">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btnPw" layoutX="458.0" layoutY="225.0" mnemonicParsing="false" onAction="#btnPWOnAction" opacity="0.0" prefHeight="17.0" prefWidth="18.0" style="-fx-background-radius: 25;">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Button>
-      <PasswordField fx:id="txtPw" layoutX="260.0" layoutY="225.0" onAction="#txtPwOnAction" prefHeight="36.0" prefWidth="190.0" promptText="New password.." style="-fx-background-color: ash;">
+      <PasswordField fx:id="txtPw" layoutX="260.0" layoutY="225.0" onAction="#txtPwOnAction" onKeyTyped="#txtPwOnKeyTyped" prefHeight="36.0" prefWidth="190.0" promptText="New password.." style="-fx-background-color: ash;">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor>
@@ -52,5 +48,20 @@
             <Font name="Tempus Sans ITC" size="31.0" />
          </font>
       </Label>
+      <ToggleButton fx:id="toggleBtn" layoutX="487.0" layoutY="231.0" mnemonicParsing="false" onAction="#toggleBtnOnAction" opacity="0.0" prefHeight="25.0" prefWidth="24.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ToggleButton>
+      <Label fx:id="lblPw" layoutX="275.0" layoutY="269.0" prefHeight="25.0" prefWidth="161.0" text="*Shown password" textFill="#008037">
+         <font>
+            <Font name="Segoe UI Semibold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnCreate" layoutX="284.0" layoutY="301.0" mnemonicParsing="false" onAction="#btnCreateOnAction" opacity="0.0" prefHeight="25.0" prefWidth="89.0" style="-fx-background-radius: 25;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
    </children>
 </AnchorPane>

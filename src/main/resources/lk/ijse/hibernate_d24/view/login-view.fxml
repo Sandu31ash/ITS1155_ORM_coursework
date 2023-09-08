@@ -2,8 +2,10 @@
 
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -28,14 +30,25 @@
             <Font name="Gadugi Bold" size="20.0" />
          </font>
       </TextField>
-      <PasswordField fx:id="txtPw" blendMode="OVERLAY" layoutX="911.0" layoutY="409.0" onAction="#txtPwOnAction" prefHeight="44.0" prefWidth="284.0" promptText="Password..">
+      <PasswordField fx:id="txtPw" blendMode="OVERLAY" layoutX="911.0" layoutY="409.0" onAction="#txtPwOnAction" onKeyTyped="#txtPwKeyTyped" prefHeight="44.0" prefWidth="284.0" promptText="Password..">
          <font>
             <Font name="Gadugi Bold" size="20.0" />
-         </font></PasswordField>
-      <Button fx:id="btnPw" layoutX="1204.0" layoutY="419.0" mnemonicParsing="false" onAction="#btnPwOnAction" prefHeight="9.0" prefWidth="32.0" style="-fx-background-radius: 50; -fx-background-color: ash;">
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></PasswordField>
+      <ToggleButton fx:id="toggleBtn" layoutX="1205.0" layoutY="416.0" mnemonicParsing="false" onAction="#toggleBtnOnAction" opacity="0.0" prefHeight="19.0" prefWidth="32.0">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
-      </Button>
+      </ToggleButton>
+      <Label fx:id="lblPw" layoutX="911.0" layoutY="463.0" prefHeight="25.0" prefWidth="161.0" text="*Shown password" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Semibold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
    </children>
 </AnchorPane>

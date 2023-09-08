@@ -21,6 +21,8 @@ public class DAOFactory {
                 return new StudentDAOImpl();
             case ROOM:
                 return new RoomDAOImpl();
+            case RESERVATION:
+                return new ReservationDAOImpl();
             case QUERY_DAO:
                 return new QueryDAOImpl();
             case USER:
@@ -32,7 +34,7 @@ public class DAOFactory {
     }
 
     public enum DAOTypes {
-        STUDENT , ROOM , USER , QUERY_DAO
+        STUDENT , ROOM , USER, RESERVATION , QUERY_DAO
     }
 
 }

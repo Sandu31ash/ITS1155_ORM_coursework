@@ -1,15 +1,25 @@
 package lk.ijse.hibernate_d24.entity;
 
-import java.util.Date;
+import java.util.List;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+
+//@Entity
 public class Student {
 
+//    @Id
     private String id;
     private String name;
     private String address;
     private String contact;
     private String dob;
     private String gender;
+
+//    @ManyToOne
+//    private Room room;
+
 
     public Student(String id, String name, String address, String contact, String dob, String gender) {
         this.id = id;
@@ -19,6 +29,18 @@ public class Student {
         this.dob = dob;
         this.gender = gender;
     }
+
+    public Student() {
+
+    }
+
+//    public Room getRoom() {
+//        return room;
+//    }
+//
+//    public void setRoom(Room room) {
+//        this.room = room;
+//    }
 
     public String getId() {
         return id;

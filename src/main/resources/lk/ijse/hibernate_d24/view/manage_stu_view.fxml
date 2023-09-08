@@ -108,17 +108,22 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </TextField>
-      <Button fx:id="btnDelete" layoutX="591.0" layoutY="552.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" opacity="0.0" prefHeight="42.0" prefWidth="160.0" style="-fx-background-radius: 25;">
+      <Button fx:id="btnDelete" layoutX="651.0" layoutY="552.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" opacity="0.0" prefHeight="42.0" prefWidth="167.0" style="-fx-background-radius: 25;">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btnSave" layoutX="971.0" layoutY="552.0" mnemonicParsing="false" onAction="#btnSaveOnAction" opacity="0.0" prefHeight="42.0" prefWidth="160.0" style="-fx-background-radius: 25;">
+      <Button fx:id="btnSave" layoutX="1034.0" layoutY="552.0" mnemonicParsing="false" onAction="#btnSaveOnAction" opacity="0.0" prefHeight="42.0" prefWidth="160.0" style="-fx-background-radius: 25;">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btnUpdate" layoutX="781.0" layoutY="552.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" opacity="0.0" prefHeight="42.0" prefWidth="160.0" style="-fx-background-radius: 25;">
+      <Button fx:id="btnUpdate" layoutX="846.0" layoutY="552.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" opacity="0.0" prefHeight="42.0" prefWidth="160.0" style="-fx-background-radius: 25;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnReset" layoutX="460.0" layoutY="552.0" mnemonicParsing="false" onAction="#btnResetOnAction" opacity="0.0" prefHeight="42.0" prefWidth="167.0" style="-fx-background-radius: 25;">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

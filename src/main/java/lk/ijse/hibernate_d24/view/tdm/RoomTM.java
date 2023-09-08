@@ -48,7 +48,7 @@ public class RoomTM implements Comparable<RoomTM>{
 
     @Override
     public String toString() {
-        return "Room{" +
+        return "RoomTM{" +
                 "rId='" + rId + '\'' +
                 ", type='" + type + '\'' +
                 ", keyMoney='" + keyMoney + '\'' +
